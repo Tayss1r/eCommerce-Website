@@ -1,5 +1,17 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=ecommerce";
-$user = "root";
-$password = "";
-$PDO = new PDO($dsn, $user, $password);
+class connexion
+{
+    private $pdo;
+    public function __construct()
+    {
+
+        $dsn = "mysql:host=localhost;dbname=ecommerce";
+        $user = "root";
+        $pw = "";
+        $this->pdo = new PDO($dsn, $user, $pw);
+    }
+    public function getConnexion()
+    {
+        return $this->pdo;
+    }
+}
