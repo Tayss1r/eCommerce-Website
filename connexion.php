@@ -1,17 +1,15 @@
 <?php
-class connexion
-{
-    private $pdo;
-    public function __construct()
-    {
 
+class connexion {
+    private $pdo;
+    public function __construct() {
         $dsn = "mysql:host=localhost;dbname=ecommerce";
         $user = "root";
-        $pw = "";
-        $this->pdo = new PDO($dsn, $user, $pw);
+        $pwd = "";
+        $this->pdo = new PDO($dsn,$user,$pwd);
     }
-    public function getConnexion()
-    {
+
+    public function getConnexion () {
         return $this->pdo;
     }
 }
